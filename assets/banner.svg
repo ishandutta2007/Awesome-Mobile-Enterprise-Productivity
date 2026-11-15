@@ -47,9 +47,9 @@
       100% { transform: translateY(0px) rotate(0deg); }
     }
     @keyframes pulseGlow {
-      0% { opacity: 0.35; transform: scale(0.98); }
-      50% { opacity: 0.75; transform: scale(1.02); }
-      100% { opacity: 0.35; transform: scale(0.98); }
+      0% { opacity: 0.35; }
+      50% { opacity: 0.75; }
+      100% { opacity: 0.35; }
     }
     @keyframes flowLine {
       0% { stroke-dashoffset: 400; }
@@ -66,7 +66,7 @@
     .floating-card-1 { animation: floatSlow 7s ease-in-out infinite; }
     .floating-card-2 { animation: floatMedium 9s ease-in-out infinite; }
     .floating-pill { animation: floatSlow 5s ease-in-out infinite; }
-    .pulsing-beam { animation: pulseGlow 4s ease-in-out infinite; transform-origin: center; }
+    .pulsing-beam { animation: pulseGlow 4s ease-in-out infinite; }
     .moving-orb { animation: orbMotion 8s ease-in-out infinite; }
     .flowing-dash { stroke-dasharray: 12, 12; animation: flowLine 15s linear infinite; }
   </style>
@@ -147,7 +147,7 @@
     </text>
 
     <!-- Subtitle / Tagline -->
-    <text x="0" y="240" fill="#94a3b8" font-size="16" font-weight="400" line-height="24">
+    <text x="0" y="240" fill="#94a3b8" font-size="16" font-weight="400">
       Commercial SaaS suites &amp; open-source alternatives for documents,
     </text>
     <text x="0" y="265" fill="#94a3b8" font-size="16" font-weight="400">
@@ -157,9 +157,9 @@
     <!-- Feature Pillars -->
     <g transform="translate(0, 302)">
       <text x="0" y="0" fill="#64748b" font-size="13" font-weight="500">
-        ⚡ <tspan fill="#cbd5e1">SaaS Benchmarks</tspan> &nbsp;•&nbsp; 
-        🔒 <tspan fill="#cbd5e1">Self-Hosted Tools</tspan> &nbsp;•&nbsp; 
-        📱 <tspan fill="#cbd5e1">Native Mobile Clients</tspan> &nbsp;•&nbsp; 
+        ⚡ <tspan fill="#cbd5e1">SaaS Benchmarks</tspan> &#160;•&#160; 
+        🔒 <tspan fill="#cbd5e1">Self-Hosted Tools</tspan> &#160;•&#160; 
+        📱 <tspan fill="#cbd5e1">Native Mobile Clients</tspan> &#160;•&#160; 
         ⭐ <tspan fill="#cbd5e1">GitHub Star Ratings</tspan>
       </text>
     </g>
