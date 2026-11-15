@@ -229,7 +229,7 @@ Contributions are welcome! If you know of an enterprise-grade mobile productivit
 
 1. 🍴 Fork the repository.
 2. 🌿 Create a feature branch (`git checkout -b feature/new-productivity-tool`).
-3. ✏️ Add the project with details (Type, Stack, License, Mobile client support, and GitHub Stars_Badge).
+3. ✏️ Add the project with details (Type, Stack, License, Mobile client support, and GitHub_Stars_Badge).
 4. 🚀 Commit your changes and submit a Pull Request.
 
 ---
