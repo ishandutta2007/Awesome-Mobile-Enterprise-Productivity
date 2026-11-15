@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius: 12px; overflow: hidden;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.3" />
+    </pattern>
+
+    <!-- Filters for Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Continuous floating and pulse animations for dynamic elements */
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes floatMedium {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(-1.5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.35; transform: scale(0.98); }
+      50% { opacity: 0.75; transform: scale(1.02); }
+      100% { opacity: 0.35; transform: scale(0.98); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes orbMotion {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -20px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .bg-canvas { fill: url(#bgGrad); }
+    .grid-overlay { fill: url(#grid); }
+    .floating-card-1 { animation: floatSlow 7s ease-in-out infinite; }
+    .floating-card-2 { animation: floatMedium 9s ease-in-out infinite; }
+    .floating-pill { animation: floatSlow 5s ease-in-out infinite; }
+    .pulsing-beam { animation: pulseGlow 4s ease-in-out infinite; transform-origin: center; }
+    .moving-orb { animation: orbMotion 8s ease-in-out infinite; }
+    .flowing-dash { stroke-dasharray: 12, 12; animation: flowLine 15s linear infinite; }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="360" class="bg-canvas" />
+  <rect width="1200" height="360" class="grid-overlay" />
+
+  <!-- Ambient Glowing Orbs in Background -->
+  <g class="moving-orb" opacity="0.6">
+    <circle cx="180" cy="90" r="140" fill="#38bdf8" filter="url(#glow)" opacity="0.12" />
+    <circle cx="1020" cy="260" r="160" fill="#818cf8" filter="url(#glow)" opacity="0.15" />
+    <circle cx="900" cy="80" r="100" fill="#c084fc" filter="url(#glow)" opacity="0.1" />
+  </g>
+
+  <!-- Dynamic Curved Connection Stream (Background flow) -->
+  <path d="M -50 280 C 300 200, 450 320, 800 240 C 1000 190, 1150 250, 1250 220" 
+        fill="none" stroke="url(#primaryGlow)" stroke-width="2.5" opacity="0.4" class="flowing-dash" />
+
+  <!-- Dynamic Decorative Visual Elements (Right Side Tech Graphic) -->
+  <g class="floating-card-1" transform="translate(860, 55)">
+    <!-- Floating Mobile Enterprise Mock Card -->
+    <rect width="270" height="155" rx="16" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.4" />
+    <circle cx="28" cy="28" r="8" fill="#38bdf8" opacity="0.8" />
+    <circle cx="50" cy="28" r="8" fill="#818cf8" opacity="0.8" />
+    <circle cx="72" cy="28" r="8" fill="#34d399" opacity="0.8" />
+    
+    <rect x="25" y="55" width="120" height="12" rx="6" fill="#f8fafc" opacity="0.8" />
+    <rect x="25" y="77" width="220" height="8" rx="4" fill="#64748b" opacity="0.5" />
+    <rect x="25" y="93" width="180" height="8" rx="4" fill="#64748b" opacity="0.5" />
+    <rect x="25" y="109" width="140" height="8" rx="4" fill="#64748b" opacity="0.5" />
+
+    <g transform="translate(195, 20)">
+      <rect width="50" height="22" rx="11" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="25" y="15" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">SYNC</text>
+    </g>
+  </g>
+
+  <!-- Secondary Dynamic Card -->
+  <g class="floating-card-2" transform="translate(770, 175)">
+    <rect width="250" height="125" rx="14" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1" stroke-opacity="0.35" />
+    <rect x="22" y="24" width="70" height="10" rx="5" fill="#818cf8" opacity="0.85" />
+    <rect x="22" y="46" width="160" height="7" rx="3.5" fill="#64748b" opacity="0.4" />
+    <rect x="22" y="61" width="190" height="7" rx="3.5" fill="#64748b" opacity="0.4" />
+    
+    <!-- Mini Progress Bars / Workstream Indicators -->
+    <rect x="22" y="86" width="206" height="6" rx="3" fill="#1e293b" />
+    <rect x="22" y="86" width="145" height="6" rx="3" fill="url(#primaryGlow)" />
+  </g>
+
+  <!-- Floating Dynamic Feature Badges / Pills -->
+  <g class="floating-pill" transform="translate(680, 75)">
+    <rect width="130" height="34" rx="17" fill="#1e293b" stroke="#34d399" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="20" cy="17" r="5" fill="#34d399" />
+    <text x="70" y="22" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Open Source</text>
+  </g>
+
+  <g class="floating-pill" transform="translate(1040, 245)">
+    <rect width="115" height="34" rx="17" fill="#1e293b" stroke="#c084fc" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="18" cy="17" r="5" fill="#c084fc" />
+    <text x="62" y="22" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Offline First</text>
+  </g>
+
+  <!-- FOREGROUND TEXT SECTION (Protected from dynamic overlays) -->
+  <g transform="translate(80, 0)">
+    <!-- Top Category Tag -->
+    <g transform="translate(0, 68)">
+      <rect width="210" height="28" rx="14" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35" />
+      <text x="105" y="18" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">CURATED AWESOME LIST</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="145" fill="#ffffff" font-size="38" font-weight="800" letter-spacing="-0.5">
+      Awesome Mobile
+    </text>
+    <text x="0" y="195" fill="url(#primaryGlow)" font-size="38" font-weight="800" letter-spacing="-0.5">
+      Enterprise Productivity
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="240" fill="#94a3b8" font-size="16" font-weight="400" line-height="24">
+      Commercial SaaS suites &amp; open-source alternatives for documents,
+    </text>
+    <text x="0" y="265" fill="#94a3b8" font-size="16" font-weight="400">
+      tasks, notes, messaging, and real-time collaboration on iOS &amp; Android.
+    </text>
+
+    <!-- Feature Pillars -->
+    <g transform="translate(0, 302)">
+      <text x="0" y="0" fill="#64748b" font-size="13" font-weight="500">
+        ⚡ <tspan fill="#cbd5e1">SaaS Benchmarks</tspan> &nbsp;•&nbsp; 
+        🔒 <tspan fill="#cbd5e1">Self-Hosted Tools</tspan> &nbsp;•&nbsp; 
+        📱 <tspan fill="#cbd5e1">Native Mobile Clients</tspan> &nbsp;•&nbsp; 
+        ⭐ <tspan fill="#cbd5e1">GitHub Star Ratings</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
